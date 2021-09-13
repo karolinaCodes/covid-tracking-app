@@ -2,4 +2,18 @@ table,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+  font-family: Poppins;
+  font-weight: 400;
+  color: #173a56;
+}
+
+td {
+  padding: 1px 10px 1px 10px;
+  width: 215px;
+}
+
+h7 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: #173a56;
 }

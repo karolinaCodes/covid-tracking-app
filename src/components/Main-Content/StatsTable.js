@@ -5,7 +5,7 @@ import "./StatsTable.module.css";
 function StatsTable() {
   return (
     <Fragment>
-      <p>Today's cases:</p>
+      <h7>Today's cases:</h7>
       <table className={styles.table}>
         <tr>
           <td>Number of cases</td>
@@ -14,10 +14,6 @@ function StatsTable() {
         <tr>
           <td>Number of fatalities</td>
           <td>41</td>
-        </tr>
-        <tr>
-          <td>Number of tests administered</td>
-          <td>88097</td>
         </tr>
         <tr>
           <td>Number of hospitalizations</td>
@@ -36,15 +32,12 @@ function StatsTable() {
           <td>40424</td>
         </tr>
         <tr>
-          <td>Amount vaccinated (2 doses)</td>
+          <td>Amount fully vaccinated</td>
           <td>11039</td>
         </tr>
-        <tr>
-          <td>Number of vaccines distributed</td>
-          <td>173681</td>
-        </tr>
       </table>
-      <p>All cases:</p>
+      <br />
+      <h7>All cases:</h7>
       <table>
         <tr>
           <td className={styles.table}>Total cases</td>
@@ -53,10 +46,6 @@ function StatsTable() {
         <tr>
           <td>Total fatalities</td>
           <td>21673</td>
-        </tr>
-        <tr>
-          <td>Total test</td>
-          <td>2409865</td>
         </tr>
         <tr>
           <td>Total hospitalizations</td>
@@ -71,16 +60,8 @@ function StatsTable() {
           <td>7958272</td>
         </tr>
         <tr>
-          <td>Total vaccinations</td>
-          <td>149982</td>
-        </tr>
-        <tr>
           <td>Total vaccinated</td>
           <td>415505</td>
-        </tr>
-        <tr>
-          <td>Total vaccines distributed</td>
-          <td>1850482</td>
         </tr>
       </table>
     </Fragment>

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
-  margin: 0px 100px 0px 100px;
+  margin: 40px 120px 0px 120px;
   align-items: flex-start;
 }
 
@@ -11,4 +11,8 @@
 }
 
 .heading {
+  font-family: Poppins;
+  font-weight: 700;
+  color: #22343d;
+  font-size: 35px;
 }
