@@ -1,0 +1,14 @@
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+  margin: 0px 100px 0px 100px;
+  align-items: flex-start;
+}
+
+.doctorImg {
+  height: 70vh;
+}
+
+.heading {
+}

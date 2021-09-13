@@ -1,14 +1,17 @@
 import React, { Fragment } from "react";
 import StatsTable from "./StatsTable";
+import medicalResearcherImg from "../../assets/undraw_medical_research_qg4d.svg";
+import styles from "./MainContent.module.css";
 
 function MainContent() {
   return (
-    <Fragment>
+    <div className={styles.mainContent}>
       <div>
-        <h1>Current Statistics</h1>
+        <h1 className={styles.heading}>Current Statistics</h1>
+        <StatsTable />
       </div>
-      <StatsTable />
-    </Fragment>
+      <img src={medicalResearcherImg} className={styles.doctorImg} />
+    </div>
   );
 }
 

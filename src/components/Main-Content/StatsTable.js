@@ -1,10 +1,12 @@
 import { Fragment } from "react";
+import styles from "./StatsTable.module.css";
+import "./StatsTable.module.css";
 
 function StatsTable() {
   return (
     <Fragment>
       <p>Today's cases:</p>
-      <table>
+      <table className={styles.table}>
         <tr>
           <td>Number of cases</td>
           <td>2301</td>
@@ -45,8 +47,8 @@ function StatsTable() {
       <p>All cases:</p>
       <table>
         <tr>
-          <td>Total cases</td>
-          <td>850482</td>
+          <td className={styles.table}>Total cases</td>
+          <td className={styles.table}>850482</td>
         </tr>
         <tr>
           <td>Total fatalities</td>

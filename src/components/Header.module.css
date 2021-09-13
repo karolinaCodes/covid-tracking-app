@@ -1,0 +1,15 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 10px 20px 10px 20px;
+}
+
+.leftIcons {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.listItem {
+  margin-right: 20px;
+}
