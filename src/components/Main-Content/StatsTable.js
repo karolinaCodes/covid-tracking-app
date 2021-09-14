@@ -1,67 +1,75 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import styles from "./StatsTable.module.css";
 import "./StatsTable.module.css";
 
 function StatsTable() {
+  const [data, setData] = useState("");
+  useEffect(async () => {
+    const response = await fetch("https://api.covid19tracker.ca/summary");
+    const reponseData = await response.json();
+    const transformedData = reponseData.data[0];
+    setData(transformedData);
+  }, []);
+  console.log(data);
   return (
     <Fragment>
-      <h7>Today's cases:</h7>
+      <p>Today's cases:</p>
       <table className={styles.table}>
         <tr>
           <td>Number of cases</td>
-          <td>2301</td>
+          <td>{data["change_cases"]}</td>
         </tr>
         <tr>
           <td>Number of fatalities</td>
-          <td>41</td>
+          <td>{data["change_fatalities"]}</td>
         </tr>
         <tr>
           <td>Number of hospitalizations</td>
-          <td>61</td>
+          <td>{data["change_hospitalizations"]}</td>
         </tr>
         <tr>
           <td>Number of criticals</td>
-          <td>12</td>
+          <td>{data["change_criticals"]}</td>
         </tr>
         <tr>
           <td>Number of recoveries</td>
-          <td>2707</td>
+          <td>{data["change_recoveries"]}</td>
         </tr>
         <tr>
           <td>Number of vaccinations</td>
-          <td>40424</td>
+          <td>{data["change_vaccinations"]}</td>
         </tr>
         <tr>
           <td>Amount fully vaccinated</td>
-          <td>11039</td>
+          <td>{data["change_vaccinated"]}</td>
         </tr>
       </table>
       <br />
-      <h7>All cases:</h7>
+      <p>All cases:</p>
       <table>
         <tr>
           <td className={styles.table}>Total cases</td>
-          <td className={styles.table}>850482</td>
+          <td className={styles.table}>{data["total_cases"]}</td>
         </tr>
         <tr>
           <td>Total fatalities</td>
-          <td>21673</td>
+          <td>{data["total_fatalities"]}</td>
         </tr>
         <tr>
           <td>Total hospitalizations</td>
-          <td>850482</td>
+          <td>{data["total_hospitalizations"]}</td>
         </tr>
         <tr>
           <td>Total criticals</td>
-          <td>85082</td>
+          <td>{data["total_criticals"]}</td>
         </tr>
         <tr>
           <td>Total recoveries</td>
-          <td>7958272</td>
+          <td>{data["total_recoveries"]}</td>
         </tr>
         <tr>
           <td>Total vaccinated</td>
-          <td>415505</td>
+          <td>{data["total_vaccinated"]}</td>
         </tr>
       </table>
     </Fragment>
