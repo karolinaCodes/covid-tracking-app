@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Header from "./Header";
-import MainContent from "./MainContent";
+import Header from "../components/HomePage/Header";
+import MainContent from "../components/HomePage/MainContent";
 
 const HomePage = function () {
   return (

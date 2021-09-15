@@ -7,7 +7,9 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
+import styles from "./Menu.module.css";
 import "./Menu.module.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -104,30 +106,46 @@ export default function MenuListComposition() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem
-                      onClick={handleClose}
-                      className={classes.menuItem}
-                    >
-                      Search By Province
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleClose}
-                      className={classes.menuItem}
-                    >
-                      Previous Cases
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleClose}
-                      className={classes.menuItem}
-                    >
-                      Vaccine Stats
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleClose}
-                      className={classes.menuItem}
-                    >
-                      Fatalities
-                    </MenuItem>
+                    <Link to="/" className={styles.link}>
+                      <MenuItem
+                        onClick={handleClose}
+                        className={classes.menuItem}
+                      >
+                        Current Statistics
+                      </MenuItem>
+                    </Link>
+                    <Link to="/searchbyprovince" className={styles.link}>
+                      <MenuItem
+                        onClick={handleClose}
+                        className={classes.menuItem}
+                      >
+                        Search By Province
+                      </MenuItem>
+                    </Link>
+                    <Link to="/previouscases" className={styles.link}>
+                      <MenuItem
+                        onClick={handleClose}
+                        className={classes.menuItem}
+                      >
+                        Previous Cases
+                      </MenuItem>
+                    </Link>
+                    <Link to="/vaccinestats" className={styles.link}>
+                      <MenuItem
+                        onClick={handleClose}
+                        className={classes.menuItem}
+                      >
+                        Vaccine Stats
+                      </MenuItem>
+                    </Link>
+                    <Link to="/fatalities" className={styles.link}>
+                      <MenuItem
+                        onClick={handleClose}
+                        className={classes.menuItem}
+                      >
+                        Fatalities
+                      </MenuItem>
+                    </Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
