@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import StatsTable from "./StatsTable";
+import StatsTable from "../Main-Content/StatsTable";
 import medicalResearcherImg from "../../assets/undraw_medical_research_qg4d.svg";
 import styles from "./MainContent.module.css";
 

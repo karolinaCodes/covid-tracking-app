@@ -1,30 +1,15 @@
 import React, { Fragment } from "react";
 import styles from "./Header.module.css";
 import "./Header.module.css";
+import Menu from "./Menu";
 
 function Header() {
   return (
     <nav className={styles.navbar}>
       <h1 className={styles.heading}>Covid Tracker Canada</h1>
-
       <ul className={styles.leftIcons}>
         <li>
-          <svg
-            width="20px"
-            color="#173A56"
-            xmlns="http://www.w3.org/2000/svg"
-            className={("h-6 w-6", styles.listItem)}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <Menu />
         </li>
         <li className={styles.listItem}>
           <button className={styles.signInBtn}>Sign in</button>

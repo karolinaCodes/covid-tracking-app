@@ -2,12 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
-  margin: 40px 120px 0px 120px;
+  margin: 40px 120px 0px 150px;
   align-items: flex-start;
 }
 
 .doctorImg {
   height: 70vh;
+  width: 45vw;
 }
 
 .heading {
@@ -15,4 +16,5 @@
   font-weight: 700;
   color: #22343d;
   font-size: 35px;
+  margin-top: 0px;
 }

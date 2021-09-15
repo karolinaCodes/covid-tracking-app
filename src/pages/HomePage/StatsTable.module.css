@@ -5,11 +5,12 @@ td {
   font-family: Poppins;
   font-weight: 400;
   color: #173a56;
+  font-size: 14px;
 }
 
 td {
-  padding: 1px 10px 1px 10px;
-  width: 215px;
+  padding: 3px 15px 3px 15px;
+  width: 190px;
 }
 
 p {
